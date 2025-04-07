@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-compatible" content="IE-edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WORLD WIDE</title>
+   <link  rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   
+ </head>
+ <body>
+
+   <header>
+       <div id="menu-bar" class="fas fa-bars" onclick="showmenu()"></div>
+       <a href="" class="logo"><span>W</span>orld<span>W</span>wide</a>
+       <nav class="navbar">
+           <a href="#home">home</a>
+           <a href="#book">book</a>
+           <a href="#packages">packages</a>
+           <a href="#services">services</a>
+           <a href="#gallary">gallary</a>
+           <a href="#review">review</a>
+           <a href="#contact">contact</a>
+       </nav>
+       <div class="icon">
+           <i class="fas fa-search" onclick="showbar()" id="search-btn"></i>
+           <i class="fas fa-user" onclick="showform()"></i>
+       </div>
+       <form action="" class="search-form" onsubmit="searchPage(event)">
+           <input type="search" id="search-bar" placeholder="What you looking for...">
+         
+          <button type="submit" class="fas fa-search"></button>
+       </form>
+   </header>
+
+   <div class="login-form" >
+      <i class="fas fa-times" id="form-close" onclick="hideform()"></i>
+      <form action="" id="loginForm">
+         <h1>login</h1>
+         <input type="text" id="name" class="box" placeholder="Enter your name" >
+          <p class="error-message" id="nameError"></p>
+
+         <input type="email"  id="email" class="box" placeholder="Enter your email" >
+         <p class="error-message" id="emailError"></p>
+
+         <input type="password" id="password" class="box" placeholder="Enter your password">
+          <p class="error-message" id="passwordError"></p>
+
+         <button type="submit" id="loginButton"  class="btn">Login Now</button>
+
+
+
+         <input type="checkbox" id="remember">
+         <label for="remember">remember me</label>
+         <p>forget password? <a href="">click here!</a></p>
+         <p>don't have account? <a href="">sign up!</a></p>
+      </form>
+   </div>
+   <!----------------------------------------------------------------->
+   <!----------------------------------------------------------------->
+       
+
+   <section class="home" id="home">
+        <div class="content">
+             <h3>WORLD WIDE MAKE TRAVEL EASY</h3>
+             <p>Discover new places with us,Adventure Awaits</p>
+             <h5>Welcome to this world</h5>
+            </div>
+
+       <div class="controls">
+         <span class="video-btn blue" data-src="images/vid-3.mp4"></span>
+         <span class="video-btn" data-src="images/vid-2.mp4"></span>
+         <span class="video-btn" data-src="images/vid-1.mp4"></span>
+         <span class="video-btn" data-src="images/vid-4.mp4"></span>
+         <span class="video-btn" data-src="images/vid-5.mp4"></span>
+       </div>
+        <div class="video-container">
+            <video src="images/vid-3.mp4" id="video-slider" loop autoplay muted></video>
+        </div>
+   </section>
+    <!----------------------------------------------------------------------------------------->
+   <!------------------------------------------------------------------------------------------>
+
+   <section class="book" id="book">
+      <h1 class="heading ">
+         <span>b</span>
+         <span>o</span>
+         <span>o</span>
+         <span>k</span>
+         &nbsp;
+         &nbsp;
+         <span>n</span>
+         <span>o</span>
+         <span>w</span>
+      </h1>
+
+
+
+      <div class="row">
+         <div class="image">
+          <img src="images/book-img.svg" alt="">  
+         </div>
+         <form action="">
+            <div class="booking-form">
+               <label for="destination"><h3>Where To Go</h3></label>
+               <input type="text" id="destination" placeholder="place name" oninput="validateCountry()">
+               <span id="destination-error" class="error"></span>
+       
+               <label for="people"><h3>How Many</h3></label>
+               <input type="number" id="people" placeholder="place number" min="1" max="10" oninput="validatePeople()">
+               <span id="people-error" class="error"></span>
+       
+               <label for="arrival"><h3>arrival</h3></label>
+               <input type="text" id="arrival" placeholder="place name" oninput="validateArrival()">
+               <span id="arrival-error" class="error"></span>
+       
+               <label for="leaving"><h3>leaving</h3></label>
+               <input type="text" id="leaving" placeholder="place name" oninput="validateLeaving()">
+               <span id="leaving-error" class="error"></span>
+       
+               <button class="btn" id="book-btn" onclick="confirmBooking()" value="book now">Book Now</button>
+         </form>
+      </div>
+
+   </section>
+   <!------------------------------------------------------------------------------->
+   <!------------------------------------------------------------------------------->
+   <section class="packages" id="packages">
+      <h1 class="heading">
+         <span>p</span>
+         <span>a</span>
+         <span>c</span>
+         <span>k</span>
+         <span>a</span>
+         <span>g</span>
+         <span>e</span>
+         <span>s</span>
+      </h1>
+      
+      <div class="container">
+         <div class="box">
+            <img src="images/p-1.jpg" alt="">
+            <div class="content">
+               <h3><i class="fas fa-map-marker-alt"></i> Korea</h3>
+               <p>A wonderful civilizational development Beautiful country </p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+               </div>
+               <div class="price">$680.00<span>$920.00</span></div>
+               <button  class="btn check-btn">check now</button>
+            </div>
+         </div>
+         <div class="box">
+            <img src="images/p-2.jpg" alt="">
+            <div class="content">
+               <h3><i class="fas fa-map-marker-alt"></i> Egypt</h3>
+               <p>Beautiful and ancient pyramids Mother of the world and home </p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+               </div>
+               <div class="price">$215.00<span>$450.00</span></div>
+               <button  class="btn check-btn">check now</button>
+            </div>
+         </div>
+         <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+               <h3><i class="fas fa-map-marker-alt"></i> Hawaii</h3>
+               <p>Picturesque islands overlooking all kinds of seas Suitable for summer</p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+               </div>
+               <div class="price">$1245.00<span>$1550.00</span></div>
+               <button  class="btn check-btn">check now</button>
+            </div>
+         </div>
+         <div class="box">
+            <img src="images/p-4.jpg" alt="">
+            <div class="content">
+               <h3><i class="fas fa-map-marker-alt"></i> Italy</h3>
+               <p>One of the most beautiful and ancient cities It is famous for its pizza </p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+               </div>
+               <div class="price">$790.00<span>$999.00</span></div>
+               <button  class="btn check-btn">check now</button>
+            </div>
+         </div>
+         <div class="box">
+            <img src="images/p-5.jpg" alt="">
+            <div class="content">
+               <h3><i class="fas fa-map-marker-alt"></i> japan</h3>
+               <p>Its artificial intelligence has reached its peak A good country for learning </p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+               </div>
+               <div class="price">$325.00<span>$625.00</span></div>
+               <button  class="btn check-btn">check now</button>
+            </div>
+         </div>
+         <div class="box">
+            <img src="images/p-6.jpg" alt="">
+            <div class="content">
+               <h3><i class="fas fa-map-marker-alt"></i> india</h3>
+               <p>Spices and Falafel This is the country that is famous for its festivals</p>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+               </div>
+               <div class="price">$435.00<span>$850.00</span></div>
+               <button  class="btn check-btn">check now</button>
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <!------------------------------------------------------------------------------------------->
+   <!------------------------------------------------------------------------------------------->
+
+   <section class="services" id="services">
+      <h1 class="heading">
+         <span>s</span>
+         <span>e</span>
+         <span>r</span>
+         <span>v</span>
+         <span>i</span>
+         <span>c</span>
+         <span>e</span>
+         <span>s</span>
+      </h1>
+      
+       <div class="container">
+         
+         <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>Affordable hotel</h3>
+            <div class="list">
+             <p><i class="fa-brands fa-playstation"></i> 1 electronic games room</p>
+             <p><i class="fa-solid fa-bed"></i> 2 bed-rooms</p>
+             <p><i class="fa-solid fa-bath"></i> 1 bath-room</p>
+             <p><i class="fa-solid fa-couch"></i> 1 family salon</p>
+            </div>
+            
+         </div>
+         <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>affordable hotel</h3>
+            <div class="list">
+             <p><i class="fa-solid fa-bowl-food"></i> 2 arabic kitchens</p>
+             <p><i class="fa-solid fa-pizza-slice"></i> 1 italian kitchen</p>
+             <p><i class="fa-solid fa-fish"></i> 1 chinese kitchen</p>
+             <p><i class="fa-solid fa-cookie-bite"></i> 3 order of sweets</p>
+            </div>
+         </div>
+         <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>affordable hotel</h3>
+             <div class="list">
+              <p><i class="fa-solid fa-fire-extinguisher"></i> fire extinguishers</p>
+              <p><i class="fa-solid fa-kit-medical"></i> initial instuctions </p>
+              <p><i class="fa-solid fa-shield-halved"></i> safety wraps</p>
+              <p><i class="fa-solid fa-bell"></i> alarm bell </p>
+
+             </div>
+         </div>
+         <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>affordable hotel</h3>
+            <div class="list">
+               <p><i class="fa-solid fa-globe"></i> communications networks</p>
+               <p><i class="fa-solid fa-share-nodes"></i> social communication</p>
+               <p><i class="fa-solid fa-wifi"></i> free wifi</p>
+             </div>
+         </div>
+         <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>affordable hotel</h3>
+            <div class="list">
+             <p><i class="fa-solid fa-plane-departure"></i> excellent transporatation</p>
+             <p><i class="fa-solid fa-plane-arrival"></i> safe trips</p>
+             <p><i class="fa-solid fa-plane"></i> air services</p>
+
+            </div>
+         </div>
+         <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>affordable hotel</h3>
+            <div class="list">
+             <p><i class="fa-solid fa-map"></i> new explorations</p>
+             <p><i class="fa-solid fa-campground"></i> special for scouts</p>
+             <p><i class="fa-solid fa-mountain"></i> explorations towards the mountains</p>
+            </div>
+         </div>
+       </div>
+   </section>
+   <!--------------------------------------------------------------------------------------------------------->
+   <!--------------------------------------------------------------------------------------------------------->
+   <section class="gallary" id="gallary">
+      <h1 class="heading">
+         <span>g</span>
+         <span>a</span>
+         <span>l</span>
+         <span>l</span>
+         <span>a</span>
+         <span>r</span>
+         <span>y</span>
+      </h1>
+      <div class="overlay">
+         <div class="card">
+            <img src="images/g-1.jpg" alt="صورة">
+            <div class="details">
+               <h2>Amazing Place</h2>
+               <p> Shows the famous Egyptian pyramids, located in Giza, Egypt. These pyramids are considered one of the Seven Wonders of the Ancient World.</p>
+               <a href="" class="btn">See more</a>
+            </div>
+         </div>
+         <div class="card">
+            <img src="images/g-2.jpg" alt="صورة">
+            <div class="details">
+               <h2>Amazing Place</h2>
+               <p> Depicts a sunset over the sea with palm trees, likely in the Maldives, famous for its white sandy beaches and turquoise waters.</p>
+               <a href="" class="btn">See more</a>
+            </div>
+         </div>
+         <div class="card">
+            <img src="images/g-3.jpg" alt="صورة">
+            <div class="details">
+               <h2>Amazing Place</h2>
+               <p>Shows a coastal town with colorful houses cascading down a hill, which matches the description of Positano in Italy, located on the Amalfi Coast.</p>
+               <a href="" class="btn">See more</a>
+            </div>
+         </div>
+         <div class="card">
+            <img src="images/g-4.jpg" alt="صورة">
+            <div class="details">
+               <h2>Amazing Place</h2>
+               <p>Depicts a classic building with a large dome, matching the U.S. Capitol building in Washington, D.C., United States.</p>
+               <a href="" class="btn">See more</a>
+            </div>
+         </div>
+         <div class="card">
+            <img src="images/g-5.jpg" alt="صورة">
+            <div class="details">
+               <h2>Amazing Place</h2>
+               <p>Shows a large square with a fountain and historic buildings, likely Plaza de Cibeles in Madrid, Spain.</p>
+               <a href="#" class="btn">See more</a>
+            </div>
+         </div>
+         <div class="card">
+            <img src="images/g-6.jpg" alt="صورة">
+            <div class="details">
+               <h2>Amazing Place</h2>
+               <p>Shows a picturesque village with half-timbered houses and a water canal, which matches the description of Colmar in the Alsace region, France.</p>
+               <a href="#" class="btn">See more</a>
+            </div>
+         </div>
+      </div>
+   
+   </section>
+   
+   <!----------------------------------------------------------------------------------->
+   <!------------------------------------------------------------------------------------>
+    <section class="review" id="review">
+      <h1 class="heading">
+         <span>r</span>
+         <span>e</span>
+         <span>v</span>
+         <span>i</span>
+         <span>e</span>
+         <span>w</span>
+      </h1>
+    <div class="swiper review-slider">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <div class="box">
+                  <img src="images/pic1.jpg" alt="">
+                  <h4>khalil maatouk</h4>
+                  <p>the second partner has the largest number of shares and has right to make decisions</p>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="box">
+                  <img src="images/pic2.jpg" alt="">
+                  <h4>faris slayman</h4>
+                  <p>Specialized in organizing trips and providing beautiful destinations</p>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="box">
+                  <img src="images/pic3.jpg" alt="">
+                  <h4>ibrahim merhi</h4>
+                  <p>thw company's first advisor, the founder of travel trips, and the company's spokesman</p>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="box">
+                  <img src="images/pic4.jpg" alt="">
+                  <h4>malik karam</h4>
+                  <p>the director of the company and flights, reponsible for everthing, paying employees</p>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+        </div>
+     </section>
+     <!------------------------------------------------------------------------->
+     <section class="contact" id="contact">
+      <h1 class="heading">
+         <span>c</span>
+         <span>o</span>
+         <span>n</span>
+         <span>t</span>
+         <span>a</span>
+         <span>c</span>
+         <span>t</span>
+      </h1>
+
+ <div class="row">
+         <div class="image">
+            <img src="images/contact-img.svg" alt="">
+         </div>
+         <form id="contact-form">
+           <div class="inputbox">
+             <input type="text" placeholder="name">
+             <input type="email" placeholder="email">
+            </div>
+            <div class="inputbox">
+               <input type="text" placeholder="number">
+               <input type="text" placeholder="subject">
+            </div>
+               <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+               <input type="submit" class="btn" value="send message">
+         </form>
+            <div id="success-message" class="hidden">
+               <h2>message sent</h2>
+               <p>thank you for your message!</p>
+               <p><strong>your message:</strong><span id="user-message"></span></p>
+               <button class="close-btn">close</button>
+            </div>
+</div>
+     </section>
+     <!----------------------------------------------------------------------------------------->
+     <!----------------------------------------------------------------------------------------->
+     <section class="footer">
+      <div class="box-container">
+          <div class="box">
+              <h3>about us</h3>
+              <p>This page is for travel surveys,</p>
+              <p>exploring new cities, </p>
+              <p>and beautiful places to visit.</p>
+              <p>We wish you a nice browsing</p>
+          </div>
+          <div class="box">
+              <h3>barnch</h3>
+              <a href="#"><i class="fas fa-map-marker-alt"></i> egypt</a>
+              <a href="#"><i class="fas fa-map-marker-alt"></i> lebanon</a>
+              <a href="#"><i class="fas fa-map-marker-alt"></i> korea</a>
+              <a href="#"><i class="fas fa-map-marker-alt"></i> japan</a>
+          </div>
+          <div class="box">
+              <h3>quick links</h3>
+              <a href="#home"><i class="fas fa-home"></i> home</a>
+              <a href="#book"><i class="fas fa-plane-departure"></i> book</a>
+              <a href="#packages"><i class="fas fa-box"></i> packages</a>
+              <a href="#services"><i class="fas fa-cogs"></i> services</a>
+              <a href="#gallary"><i class="fas fa-images"></i> gallary</a>
+              <a href="#review"><i class="fas fa-star"></i> review</a>
+              <a href="#contact"><i class="fas fa-phone-alt"></i> contact</a>
+              
+          </div>
+          <div class="box">
+              <h3>follow us</h3>
+              <a href="https://www.facebook.com/mehmet.haj.2462006" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+              <em>Mehmet Haç</em>
+              <a href="https://www.instagram.com/meht.8h.06/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+              <em>Meht.8h.06</em>
+              <a href="https://wa.me/96170148785" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              <em>+961 70 14 87 85</em>
+              <a href="https://www.tiktok.com/@mehmethaj24?_t=ZS-8tk90yeb8Ei&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+              <em>El Haj</em>
+          </div>
+      </div>
+      <h1 class="created">created by <span id="typingText"></span>all right reserved</h1>
+  </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="travel.js"></script>
+    <script src="travel2.js"></script>
+<script src="travel3.js"></script>
+<script src="travel4.js"></script>
+ </body>
+</html>
